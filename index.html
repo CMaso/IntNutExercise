@@ -1,0 +1,129 @@
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Integrative Nutrition Exercise</title>
+		<style>
+			#container {
+				display: block;
+				width: 100%;
+				margin: 25px auto;
+				max-width: 450px;
+				background: #aaa;
+				color: #333;
+				border-radius: 10px;
+				font-family: tahoma, arial, sans-serif;
+				font-weight: 600;
+			}
+			
+			div.input {
+				display: inline-block;
+				margin: 10px 10px;
+				width:100%;
+				max-width: 380px;
+				padding: 0px 20px 0px 0px;
+			}
+			
+			input, select {
+				float:right;
+				min-width: 225px;
+			}
+			
+			select {
+				float: right;
+				min-width: 229px;
+			}
+			
+			button {
+				border-radius: 5px;
+				font-family: tahoma, arial, sans-serif;
+				font-weight: 600;
+				padding: 5px 10px;
+				margin:0px 5px;
+				
+			}
+			
+			#errMsgs {
+				color: #ff0000;
+				padding: 10px;
+			}
+			
+			#results {
+				padding: 10px;
+			}
+			.resultsLabel {
+				color: #0000ff;
+			}
+			
+			.colorDiv {
+				width:15px;
+				height:15px;
+				margin: 10px 5px 0px 5px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="container">
+				<div class="input">
+					<label for="firstName">First Name:</label>
+					<input type="text" name="firstName" id="firstName" maxlength="100" />
+				</div>
+
+				<div class="input">
+					<label for="lastName">Last Name:</label>
+					<input type="text" name="lastName" id="lastName" maxlength="100" />
+				</div>	
+
+				<div class="input">
+					<label for="favFood">Favorite Food:</label>
+					<input type="text" name="favFood" id="favFood"  maxlength="100" />
+				</div>
+
+				<div class="input">
+					<label for="favNum">Favorite Number:</label>
+					<input type="text" name="favNum" id="favNum" onkeypress="return isNumber(event)" />
+				</div>
+
+				<div class="input">
+					<label for="favDay">Favorite Day:</label>
+					<select name="favDay" id="favDay">
+						<option value="">--please select--</option>
+						<option value="0">Sunday</option>
+						<option value="1">Monday</option>
+						<option value="2">Tuesday</option>
+						<option value="3">Wednesday</option>
+						<option value="4">Thursday</option>
+						<option value="5">Friday</option>
+						<option value="6">Saturday</option>
+					</select>
+				</div>
+
+				<div class="input">
+					<label for="favColor">Favorite Color:</label>
+					<select name="favColor" id="favColor">
+						<option value="">--please select--</option>
+						<option value="#ff0000">Red</option>
+						<option value="#00ff00">Green</option>
+						<option value="#0000ff">Blue</option>
+						<option value="#ffff00">Yellow</option>
+						<option value="#ff00ff">Purple</option>
+						<option value="#ff6600">Orange</option>
+						<option value="#000000">Black</option>
+					</select>
+				</div>
+				
+				<div class="input">
+					<button onClick="doValidation();">Submit</button><button onClick="reset();">Reset</button>
+				</div>
+				
+				<div id="errMsgs"></div>
+
+				<div id="results"></div>
+		</div>		
+
+		<script src="app.js"></script>
+	</body>
+</html>
